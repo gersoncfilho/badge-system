@@ -1,19 +1,25 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, signal} from '@angular/core';
 import {PaginatedResponse} from '../../../model/UserData';
 import {DataService} from '../../../services/data.service';
 import {CurrencyPipe} from '@angular/common';
 import {User} from '../../../model/User';
+import {ModalComponent} from '../../shared/generic-modal/generic-modal.component';
 
 @Component({
   selector: 'app-customers-table',
   standalone: true,
   imports: [
-    CurrencyPipe
+    CurrencyPipe,
+    ModalComponent
   ],
   templateUrl: './customers-table.component.html',
   styleUrl: './customers-table.component.scss'
 })
 export class CustomersTableComponent implements OnInit {
+
+  isModalOpen = false;
+
+  selectedUser = signal<User | null>(null);
 
   usersResponse: PaginatedResponse = {
     content: [],
@@ -63,7 +69,13 @@ export class CustomersTableComponent implements OnInit {
   }
 
   editUser(user: User) {
-    console.log(user)
+    this.selectedUser.set(user);
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedUser.set(null);
   }
 
   deleteUser(id: number) {
