@@ -6,6 +6,7 @@ import {PaginationComponent} from '../../organisms/pagination/pagination.compone
 import {PaginatedResponse} from '../../../model/UserData';
 import {UsersTableComponent} from '../../organisms/users-table/users-table.component';
 import {ToastComponent} from '../../shared/toast/toast.component';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import {ToastComponent} from '../../shared/toast/toast.component';
     CurrencyPipe,
     PaginationComponent,
     UsersTableComponent,
-    ToastComponent
+    ToastComponent,
+    RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
