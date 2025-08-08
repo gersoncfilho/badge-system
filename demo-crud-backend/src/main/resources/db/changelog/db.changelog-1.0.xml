@@ -1,0 +1,33 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="gerson.filho">
+        <createTable tableName="users">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="is_active" type="boolean"/>
+            <column name="balance" type="bigint"/>
+            <column name="picture" type="varchar(255)"/>
+            <column name="age" type="int"/>
+            <column name="eye_color" type="varchar(20)"/>
+            <column name="name" type="varchar(100)"/>
+            <column name="gender" type="varchar(10)"/>
+            <column name="company" type="varchar(50)"/>
+            <column name="email" type="varchar(50)"/>
+            <column name="phone" type="varchar(20)"/>
+            <column name="address" type="varchar(255)"/>
+            <column name="about" type="varchar(255)"/>
+            <column name="registered" type="datetime"/>
+            <column name="latitude" type="double"/>
+            <column name="longitude" type="double"/>
+        </createTable>
+
+    </changeSet>
+    <changeSet id="2" author="gerson.filho">
+        <loadData tableName="users" file="db/changelog/csv/users.csv"/>
+    </changeSet>
+</databaseChangeLog>

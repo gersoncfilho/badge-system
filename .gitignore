@@ -1,0 +1,40 @@
+# === Java/Spring Boot ===
+target/
+.classpath
+.project
+.settings/
+.gradle/
+build/
+*.iml
+*.log
+.mvn/
+mvnw
+mvnw.cmd
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+buildNumber.properties
+
+# === Angular ===
+node_modules/
+dist/
+.angular/
+.env
+.env.*.local
+
+# === IDEs ===
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# === Sistema operacional ===
+.DS_Store
+Thumbs.db
+*.swp
+*~
