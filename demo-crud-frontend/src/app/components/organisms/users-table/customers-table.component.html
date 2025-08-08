@@ -1,6 +1,7 @@
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+<h1 class="text-3xl text-center text-slate-700 font-extrabold">Client List</h1>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg m-10">
   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-blue-200 dark:bg-gray-700 dark:text-gray-400">
     <tr>
       <th scope="col" class="px-6 py-3">
         Name
@@ -61,7 +62,7 @@
     </thead>
     <tbody>
       @for (user of usersResponse.content; track user.id){
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 even:bg-gray-100">
           <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
             {{ user.name }}
           </th>
@@ -78,7 +79,7 @@
             {{ user.company }}
           </td>
           <td class="px-6 py-4 text-right">
-            <a (click)="editUser(user)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+            <a (click)="editUser(user)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline cursor-pointer">Edit</a>
             <a (click)="deleteUser(user.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ml-5">Delete</a>
           </td>
         </tr>

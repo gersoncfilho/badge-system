@@ -4,7 +4,7 @@ import {DataService} from '../../../services/data.service';
 import {AsyncPipe, CurrencyPipe} from '@angular/common';
 import {PaginationComponent} from '../../organisms/pagination/pagination.component';
 import {PaginatedResponse} from '../../../model/UserData';
-import {UsersTableComponent} from '../../organisms/users-table/users-table.component';
+import {CustomersTableComponent} from '../../organisms/users-table/customers-table.component';
 import {ToastComponent} from '../../shared/toast/toast.component';
 import {RouterLink} from '@angular/router';
 
@@ -15,7 +15,7 @@ import {RouterLink} from '@angular/router';
     AsyncPipe,
     CurrencyPipe,
     PaginationComponent,
-    UsersTableComponent,
+    CustomersTableComponent,
     ToastComponent,
     RouterLink
   ],

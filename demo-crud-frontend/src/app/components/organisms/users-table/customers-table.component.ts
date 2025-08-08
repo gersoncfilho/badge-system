@@ -5,15 +5,15 @@ import {CurrencyPipe} from '@angular/common';
 import {User} from '../../../model/User';
 
 @Component({
-  selector: 'app-users-table',
+  selector: 'app-customers-table',
   standalone: true,
   imports: [
     CurrencyPipe
   ],
-  templateUrl: './users-table.component.html',
-  styleUrl: './users-table.component.scss'
+  templateUrl: './customers-table.component.html',
+  styleUrl: './customers-table.component.scss'
 })
-export class UsersTableComponent implements OnInit {
+export class CustomersTableComponent implements OnInit {
 
   usersResponse: PaginatedResponse = {
     content: [],
