@@ -5,7 +5,7 @@ import {AsyncPipe, CurrencyPipe} from '@angular/common';
 import {PaginationComponent} from '../../organisms/pagination/pagination.component';
 import {PaginatedResponse} from '../../../model/UserData';
 import {CustomersTableComponent} from '../../organisms/users-table/customers-table.component';
-import {ToastComponent} from '../../shared/toast/toast.component';
+import {ToastComponent} from '../../organisms/toast/toast.component';
 import {RouterLink} from '@angular/router';
 
 @Component({

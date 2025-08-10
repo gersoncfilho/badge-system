@@ -92,7 +92,9 @@
   [isOpen]="isModalOpen"
   (closed)="closeModal()"
   [user]="selectedUser()">
-  <h2 class="text-xl font-bold mb-4">Modal Title</h2>
-  {{this.selectedUser()?.name}}
-  <p>Modal content goes here.</p>
+
+  <h2 class="text-xl font-bold mb-4">Update Customer</h2>
+
+  <app-user-update-form [user]="selectedUser()" (submitted)="updateUser($event)" (cancel)="closeModal()"></app-user-update-form>
+
 </app-modal>

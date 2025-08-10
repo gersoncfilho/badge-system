@@ -1,0 +1,5 @@
+<label [for]="id">{{ label }}</label>
+<input [id]="id" [type]="type ?? 'text'" [formControl]="control" />
+@if (control.invalid && (control.dirty || control.touched)) {
+  <small class="error">Campo inválido.</small>
+}

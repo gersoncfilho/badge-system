@@ -3,14 +3,16 @@ import {PaginatedResponse} from '../../../model/UserData';
 import {DataService} from '../../../services/data.service';
 import {CurrencyPipe} from '@angular/common';
 import {User} from '../../../model/User';
-import {ModalComponent} from '../../shared/generic-modal/generic-modal.component';
+import {ModalComponent} from '../generic-modal/generic-modal.component';
+import {UserUpdateFormComponent} from '../user-update-form/user-update-form.component';
 
 @Component({
   selector: 'app-customers-table',
   standalone: true,
   imports: [
     CurrencyPipe,
-    ModalComponent
+    ModalComponent,
+    UserUpdateFormComponent
   ],
   templateUrl: './customers-table.component.html',
   styleUrl: './customers-table.component.scss'
@@ -84,5 +86,10 @@ export class CustomersTableComponent implements OnInit {
         this.getUsers(1, 10);
       }
     })
+  }
+
+  updateUser(user: User) {
+    // Placeholder for update logic; ensures template binding compiles and modal closes
+    this.closeModal();
   }
 }

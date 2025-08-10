@@ -1,0 +1,98 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="w-full max-w-5xl mx-auto bg-white/70 dark:bg-slate-800/60 backdrop-blur rounded-xl shadow-lg p-6 md:p-8">
+  <h2 class="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-6">Editar Usuário</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- ID (read-only) -->
+    <div class="col-span-1 md:col-span-2">
+      <app-input-field [control]="form.controls.id" label="ID" type="number" id="id"></app-input-field>
+    </div>
+
+    <!-- Name -->
+    <div>
+      <app-input-field [control]="form.controls.name" label="Nome" type="text" id="name"></app-input-field>
+    </div>
+
+    <!-- Email -->
+    <div>
+      <app-input-field [control]="form.controls.email" label="Email" type="email" id="email"></app-input-field>
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <app-input-field [control]="form.controls.phone" label="Telefone" type="tel" id="phone"></app-input-field>
+    </div>
+
+    <!-- Company -->
+    <div>
+      <app-input-field [control]="form.controls.company" label="Empresa" type="text" id="company"></app-input-field>
+    </div>
+
+    <!-- Age -->
+    <div>
+      <app-input-field [control]="form.controls.age" label="Idade" type="number" id="age"></app-input-field>
+    </div>
+
+    <!-- Gender -->
+    <div>
+      <app-input-field [control]="form.controls.gender" label="Gênero" type="text" id="gender"></app-input-field>
+    </div>
+
+    <!-- Eye Color -->
+    <div>
+      <app-input-field [control]="form.controls.eyeColor" label="Cor dos olhos" type="text" id="eyeColor"></app-input-field>
+    </div>
+
+    <!-- Balance -->
+    <div>
+      <app-input-field [control]="form.controls.balance" label="Saldo" type="text" id="balance"></app-input-field>
+    </div>
+
+    <!-- Picture URL -->
+    <div>
+      <app-input-field [control]="form.controls.picture" label="URL da Foto" type="url" id="picture"></app-input-field>
+    </div>
+
+    <!-- Registered (date/time as string) -->
+    <div>
+      <app-input-field [control]="form.controls.registered" label="Registrado em" type="text" id="registered"></app-input-field>
+    </div>
+
+    <!-- Latitude -->
+    <div>
+      <app-input-field [control]="form.controls.latitude" label="Latitude" type="number" id="latitude"></app-input-field>
+    </div>
+
+    <!-- Longitude -->
+    <div>
+      <app-input-field [control]="form.controls.longitude" label="Longitude" type="number" id="longitude"></app-input-field>
+    </div>
+
+    <!-- Address -->
+    <div class="md:col-span-2">
+      <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="address">Endereço</label>
+      <textarea id="address" rows="2" formControlName="address" class="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+    </div>
+
+    <!-- About -->
+    <div class="md:col-span-2">
+      <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="about">Sobre</label>
+      <textarea id="about" rows="4" formControlName="about" class="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+    </div>
+
+    <!-- isActive -->
+    <div class="md:col-span-2 flex items-center gap-2 mt-2">
+      <input id="isActive" type="checkbox" formControlName="isActive" class="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500" />
+      <label for="isActive" class="text-sm font-medium text-slate-700 dark:text-slate-300">Ativo</label>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="mt-8 flex items-center justify-end gap-3">
+    <button type="button" (click)="onCancel()" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700">
+      Cancelar
+    </button>
+    <button type="submit" class="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50" [disabled]="form.invalid">
+      Salvar
+    </button>
+  </div>
+</form>

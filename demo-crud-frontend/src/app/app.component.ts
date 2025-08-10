@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {NavbarComponent} from './components/organisms/navbar/navbar.component';
 import {CustomersTableComponent} from './components/organisms/users-table/customers-table.component';
 import {DataService} from './services/data.service';
-import {ToastComponent} from './components/shared/toast/toast.component';
+import {ToastComponent} from './components/organisms/toast/toast.component';
 
 @Component({
   selector: 'app-root',
