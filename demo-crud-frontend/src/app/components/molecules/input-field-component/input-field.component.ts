@@ -6,11 +6,10 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
   standalone: true,
   imports: [ReactiveFormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './input-field.component.html',
+  templateUrl: './input-field.component.html'
 })
 export class InputFieldComponent {
   @Input({required: true}) control!: FormControl;
-  @Input({required: true}) label!: string;
   @Input() type?: string;
   @Input() id?: string;
 }

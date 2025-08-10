@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, inject, Input, Output} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {User} from '../../../model/User';
-import {InputFieldComponent} from '../../molecules/input-field.component';
+import {InputFieldComponent} from '../../molecules/input-field-component/input-field.component';
 
 @Component({
   selector: 'app-user-update-form',

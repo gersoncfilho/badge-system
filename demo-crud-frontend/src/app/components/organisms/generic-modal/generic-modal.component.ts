@@ -13,7 +13,7 @@ import { User } from '../../../model/User';
       (click)="onBackdropClick($event)"
     >
       <div
-        class="bg-white rounded-lg shadow-lg p-6 min-w-[300px] relative"
+        class="bg-white rounded-lg shadow-lg p-6 relative w-[70vw] h-[70vh] overflow-auto"
         (click)="$event.stopPropagation()"
       >
         <button
