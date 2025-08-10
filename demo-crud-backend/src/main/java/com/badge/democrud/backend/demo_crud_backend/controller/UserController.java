@@ -2,7 +2,7 @@ package com.badge.democrud.backend.demo_crud_backend.controller;
 
 import com.badge.democrud.backend.demo_crud_backend.exception.NotFoundException;
 import com.badge.democrud.backend.demo_crud_backend.model.User;
-import com.badge.democrud.backend.demo_crud_backend.model.dto.UserUpdateDTO;
+import com.badge.democrud.backend.demo_crud_backend.model.dto.UserDTO;
 import com.badge.democrud.backend.demo_crud_backend.service.UserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @GetMapping
-    public Page<User> getUsers(Pageable pageable) {
+    public Page<UserDTO> getUsers(Pageable pageable) {
         return service.getPaginatedUsers(pageable);
     }
 
@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @PutMapping("/update/{id}")
-    public User updateUser(@PathVariable long id, @RequestBody UserUpdateDTO user) throws
+    public User updateUser(@PathVariable long id, @RequestBody UserDTO user) throws
             NotFoundException {
         return service.updateUser(id, user);
     }
